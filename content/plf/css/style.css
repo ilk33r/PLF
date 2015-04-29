@@ -1,0 +1,51 @@
+/**
+ * ------------------------------------------------
+ * Admin Css
+ * ------------------------------------------------
+ *
+ * @package		shared
+ * @createdate	Apr 19 15 17:16
+ * @version		1.0.0
+ * @author		ilker ozcan
+ *
+ */
+
+body.loginform{color: white;}
+html.loginform, body.loginform, .container-fluid.loginform, .loginform .row{height: 100%;}
+.loginform .formColumn{display: table; height: 100%; position: relative;}
+.loginform .formColumn .formArea{vertical-align: middle; width: 100%; display: table-cell;}
+.loginform .formColumn .formArea .verticalCenter{  background: #252A2F;border-radius: 8px;  padding: 2%; }
+.loginform .formColumn .errorMessageArea{  padding: 4px; border-radius: 8px; text-align: center; font-size: 16px;}
+
+html, body{height:100%;}
+.adminContainer{height: 100%;}
+.adminHeader{background: #252A2F;}
+.adminHeader .column h2{color: white;  padding-left: 25px;}
+.adminPageRow{overflow: hidden;padding-bottom: 25px; min-height: 100%;}
+.adminPageRow .menuArea{height: 100%; background: #252A2F; box-sizing: border-box; padding: 1%; margin-bottom: -1000em; padding-bottom: 1000em;}
+.adminPageRow .menuArea .menuGroup{font-size: 135%;word-wrap: break-word; white-space: inherit;}
+.adminPageRow .menuArea ul{list-style-type: none;  list-style-type: none; color: #CACACA; padding: 8px 0px 16px 20px;}
+a.text-anchor{color: #CACACA;}
+a.text-anchor:hover{color: #acacac;}
+.menuGroup i{margin-right: 10px;}
+.adminPageRow .contentArea{background: white;  padding-top: 20px; padding-bottom: 40px;}
+a.changePasswordLink{  margin: 8px 0px 16px 10px; display: inline-block; color: #CACACA;  width: 100%;}
+a.changePasswordLink i{  margin-right: 10px;}
+a.changePasswordLink:hover{color: #acacac;}
+.adminPageRow .contentArea a.optionLink{  margin: 0px 4px;}
+.adminPageRow .contentArea .adminForm{background-color: #F5F5F5;padding: 20px;}
+
+.adminPageRow .btn-group{text-align: center;}
+.adminPageRow .btn-group > .btn{  float: none; display: inline-block; margin: 0px 2px;}
+.adminPageRow .btn-group button i{margin: 0px 4px 0px 0px;}
+.adminPageRow .richTextField{margin: 8px 0px 0px 0px; resize: vertical; height: auto; min-height: 160px;overflow: auto;}
+.adminPageRow .richTextField .imageArea{ cursor: nwse-resize;}
+.adminPageRow .richTextField .imageArea:hover{border: 2px dashed rgba(0, 0, 0, 0.41);}
+.adminPageRow .richTextField .imageArea img{width: 100%;height: 100%;}
+
+.adminPageRow .adminImageUploadArea{  border-radius: 4px; border: 1px solid #CCC; padding: 10px; max-width: 300px; min-height: 150px;
+	text-align: center; width: 100%; display: table;cursor: pointer;}
+.adminPageRow .adminImageUploadArea img{  width: 100%; height: auto;}
+.adminPageRow .adminImageUploadArea span{text-align: center;width: 100%;display: table-cell;vertical-align: middle;}
+.adminPageRow .fakeInput{display: none;}
+.adminPageRow .progress{display: none;}

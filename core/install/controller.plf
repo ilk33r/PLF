@@ -1,0 +1,36 @@
+<?php if ( ! defined('BASEPATH')) exit('Direct access forbidden.');
+
+/**
+ * ------------------------------------------------
+ * {{CONTROLLER_NAME}}
+ * ------------------------------------------------
+ *
+ * @package		{{APPLICACITON_NAME}}
+ * @createdate	{{CREATE_DATE}}
+ * @version		1.0.0
+ * @author
+ *
+ */
+
+class {{CONTROLLER_NAME}} extends PLF_Controller
+{
+
+	public static $cli		= false;
+
+	// only override method is __construct
+	/*
+	public function __construct()
+	{
+		parent::__construct();
+		// your init code
+	}
+	*/
+
+	// this is page index method
+	/*
+	public function index()
+	{
+
+	}
+	*/
+}

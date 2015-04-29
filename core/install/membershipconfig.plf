@@ -1,0 +1,101 @@
+<?php if ( ! defined('BASEPATH')) exit('Direct access forbidden.');
+
+
+/**
+* ------------------------------------------------
+* Membership Config Class
+* ------------------------------------------------
+* 
+* @author ilker ozcan 
+* 
+*/
+
+final class MembershipConfig 
+{
+
+
+/**
+* ------------------------------------------------
+* Table name for users
+* ------------------------------------------------
+*
+* @author ilker ozcan
+* @var string $databaseTable
+*
+*/
+
+	public static $databaseTable				= 'users';
+
+
+/**
+* ------------------------------------------------
+* Cookie name for users
+* ------------------------------------------------
+*
+* @author ilker ozcan
+* @var string $cookiePrefix
+*
+*/
+
+	public static $cookiePrefix					= 'PLF_member_';
+
+
+/**
+* ------------------------------------------------
+* User should login again after this time
+* ------------------------------------------------
+*
+* @author ilker ozcan
+* @var int $loginExpirationSeconds
+*
+*/
+
+	public static $loginExpirationSeconds		= 172800; // 48 hours
+
+
+/**
+* ------------------------------------------------
+* If you are using akamai, cloudflare, etc... you should reduce this value
+* ------------------------------------------------
+*
+* @author ilker ozcan
+* @var int $renewUserSessionSeconds
+*
+*/
+
+	public static $renewUserSessionSeconds		= 300; // 5 minutes
+
+
+/**
+* ------------------------------------------------
+* Choose a default user group for membership->addUser methot
+* ------------------------------------------------
+*
+* @author ilker ozcan
+* @var int $defaultUserGroupId
+*
+*/
+
+	public static $defaultUserGroupId			= 1;
+
+
+/**
+* ------------------------------------------------
+* Forgot password key expire time.
+* ------------------------------------------------
+*
+* @author ilker ozcan
+* @var int $activationKeyExpire
+*
+*/
+
+	public static $activationKeyExpire			= 432000; // 5 days
+	
+}
+
+
+/**
+* ------------------------------------------------
+* End of file membership.php
+* ------------------------------------------------
+*/

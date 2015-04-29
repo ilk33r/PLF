@@ -1,0 +1,107 @@
+<?php if ( ! defined('BASEPATH')) exit('Direct access forbidden.');
+
+/**
+ * ------------------------------------------------
+ * {{ADMIN_NAME}}
+ * ------------------------------------------------
+ *
+ * @package		{{APPLICACITON_NAME}}
+ * @createdate	{{CREATE_DATE}}
+ * @version		1.0.0
+ * @author
+ *
+ */
+
+class {{ADMIN_NAME}} extends AdminLibrary
+{
+	public function __construct()
+	{
+		// required methods
+		$this->dbobject				= ['model'=>'', 'dbtable'=>''];
+		$this->name					= ''; // ascii module name
+		$this->listFields			= ['id', 'field_1', 'field_2', 'getUnixTime']; // list fields (required)
+		$this->listFieldNames		= ['ID', 'Field 1', 'Field 2']; // list fields display names (required)
+		$this->editFields			= ['field_1']; // editable fields (required)
+		$this->editFieldNames		= ['Field 1']; // editable field display names (required)
+
+		//$this->localizedName		= ''; // module name (not required)
+
+		//$this->icon				= ''; // module icon (not required)
+
+        // Not required
+        // List item per page (default 50)
+        //$this->rowCountPerPage			= 50;
+
+		// Not required
+		// Class is hidden or not in the admin page
+		// default false
+		//$this->isHiddenInGroup			= false;
+
+		// Not required
+		// Append your custom css or javascript file into admin page
+		//$this->customCss			= '';
+		//$this->customJs				= '';
+	}
+
+	// Return a base field name.
+	// this field name display foreign key list (select box) and admin breadcrumb
+	// Not required
+	// if this method does not returning any data
+	// plf display first field. (in generally id)
+	/*
+	public function fieldName()
+	{
+		return 'field_1';
+	}*/
+
+	// Not required
+	// admin pre save method
+	/*
+	public function save($postData, $allFields, $dbObject)
+	{
+		// your pretty stuff
+		// for example
+
+		// getting plf instance and load text helper
+		$PLF		=& Common::getInstance();
+		$PLF['load']->helper('text');
+
+		// slugify username, e-mail and crypt password
+		$postData['userNameClean']			= slugifyText($postData['userName']);
+		$postData['userEmailClean']			= slugifyText($postData['userEmail']);
+		$postData['userPassword']			= crypt($postData['userPassword'], time());
+
+
+		// call parent method (parent validate form data)
+		// or return your response
+		// return ['status'=>false, 'errorMessage'=>'An error occured', 'errorFields'=>'field_1', 'objectId'=>'inserted object id'];
+		return parent::save($postData, $allFields, $dbObject);
+	}*/
+
+	// Permissions
+	// Not required
+	// all of them return true as default
+	// if you want user does not delete row
+	// just return false in hasDeletePermission() methot
+	/*
+	public function hasEditPermission()
+    {
+    	return true;
+    }
+
+    public function hasDeletePermission()
+    {
+    	return true;
+    }
+
+    public function hasAddPermission()
+    {
+    	return true;
+    }
+
+    public function extraLinks()
+    {
+    	return array();
+    }
+    */
+}

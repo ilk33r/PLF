@@ -1,0 +1,44 @@
+<?php if ( ! defined('BASEPATH')) exit('Direct access forbidden.');
+
+/**
+ * ------------------------------------------------
+ * {{MODEL_NAME}}
+ * ------------------------------------------------
+ *
+ * @package		{{APPLICACITON_NAME}}
+ * @createdate	{{CREATE_DATE}}
+ * @version		1.0.0
+ * @author
+ *
+ */
+
+class {{APPLICACITON_NAME}}_{{MODEL_NAME}} extends ActiveRecord
+{
+	public $id						= ['type'=>'mediumint', 'pk'=>true, 'un'=>true, 'ai' => true, 'nn'=>true];
+
+	/*
+	// If you want to use a different table name, you can set in this section
+	public function __construct()
+    {
+    	$this->databaseTableName			= 'custom_table_name';
+
+    	parent::__construct();
+    }
+    */
+}
+
+
+class {{MODEL_NAME}} extends PLF_Model
+{
+
+	// only override method is __construct
+	/*
+	public function __construct()
+	{
+		parent::__construct();
+		$this->dbobject			= new {{APPLICACITON_NAME}}_{{MODEL_NAME}}();
+		// your init code
+	}
+	*/
+
+}

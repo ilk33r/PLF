@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Administration Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Administration Page">
+	<meta name="author" content="PLF (Lightweight PHP web framework)">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‚Äò#!watch‚Äô to the browser URL, then refresh the page. -->
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+	<link rel="shortcut icon" href="img/favicon.png">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row clearfix adminHeader">
+		<div class="col-md-12 column"><h2>Administration Page</h2></div>
+	</div>
+	<div class="row clearfix adminPageRow">
+		<div class="col-md-2 column menuArea">
+			<a class="changePasswordLink" href=""><i class="glyphicon glyphicon-wrench" aria-hidden="true"></i>Welcome, UserName</a>
+			<span class="label menuGroup">Label</span>
+			<ul>
+				<li>
+					<a href="" class="text-anchor"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>Lorem ipsum dolor sit amet</a>
+				</li>
+			</ul> <span class="label menuGroup">Label</span>
+		</div>
+		<div class="col-md-10 column contentArea">
+			<ul class="breadcrumb">
+				<li>
+					<a href="#">Home</a> <span class="divider">/</span>
+				</li>
+				<li>
+					<a href="#">Library</a> <span class="divider">/</span>
+				</li>
+				<li class="active">
+					Data
+				</li>
+			</ul>
+			<div class="alert alert-dismissable alert-success">
+				 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<h4>
+					Alert!
+				</h4> <strong>Warning!</strong> Best check yo self, you're not looking too good. <a href="#" class="alert-link">alert link</a>
+			</div>
+			<div class="alert alert-dismissable alert-danger">
+				 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<h4>
+					Alert!
+				</h4> <strong>Warning!</strong> Best check yo self, you're not looking too good. <a href="#" class="alert-link">alert link</a>
+			</div>
+			<div class="alert alert-info">
+				 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<h4>
+					Alert!
+				</h4> <strong>Warning!</strong> Best check yo self, you're not looking too good. <a href="#" class="alert-link">alert link</a>
+			</div>
+			<div class="alert alert-warning">
+				 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<h4>
+					Alert!
+				</h4> <strong>Warning!</strong> Best check yo self, you're not looking too good. <a href="#" class="alert-link">alert link</a>
+			</div>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>
+							#
+						</th>
+						<th>
+							Product
+						</th>
+						<th>
+							Payment Taken
+						</th>
+						<th>
+							Status
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							1
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							01/04/2012
+						</td>
+						<td>
+							Default
+						</td>
+					</tr>
+					<tr class="active">
+						<td>
+							1
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							01/04/2012
+						</td>
+						<td>
+							Approved
+						</td>
+					</tr>
+					<tr class="success">
+						<td>
+							2
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							02/04/2012
+						</td>
+						<td>
+							Declined
+						</td>
+					</tr>
+					<tr class="warning">
+						<td>
+							3
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							03/04/2012
+						</td>
+						<td>
+							Pending
+						</td>
+					</tr>
+					<tr class="danger">
+						<td>
+							4
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							04/04/2012
+						</td>
+						<td>
+							Call in to confirm
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<form role="form">
+				<div class="form-group">
+					<label for="exampleInputEmail1">Email address</label><input type="email" class="form-control" id="exampleInputEmail1" />
+				</div>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Password</label><input type="password" class="form-control" id="exampleInputPassword1" />
+				</div>
+				<div class="form-group">
+					<label for="exampleInputFile">File input</label><input type="file" id="exampleInputFile" />
+					<p class="help-block">
+						Example block-level help text here.
+					</p>
+				</div>
+				<div class="checkbox">
+					<label><input type="checkbox" /> Check me out</label>
+				</div> <button type="submit" class="btn btn-default">Submit</button>
+			</form>
+			<ul class="pagination pull-right">
+				<li>
+					<a href="#">Prev</a>
+				</li>
+				<li>
+					<a href="#">1</a>
+				</li>
+				<li>
+					<a href="#">2</a>
+				</li>
+				<li>
+					<a href="#">3</a>
+				</li>
+				<li>
+					<a href="#">4</a>
+				</li>
+				<li>
+					<a href="#">5</a>
+				</li>
+				<li>
+					<a href="#">Next</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

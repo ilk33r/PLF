@@ -1,0 +1,44 @@
+<?php if ( ! defined('BASEPATH')) exit('Direct access forbidden.');
+
+/**
+ * ------------------------------------------------
+ * {{VIEW_NAME}}
+ * ------------------------------------------------
+ *
+ * @package		{{APPLICACITON_NAME}}
+ * @createdate	{{CREATE_DATE}}
+ * @version		1.0.0
+ * @author
+ *
+ */
+
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="PLF (Lightweight PHP web framework)">
+
+        <link href="<?=$contentPath;?>css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?=$contentPath;?>css/style.css" rel="stylesheet">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="<?=$contentPath;?>js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
+        <link rel="shortcut icon" href="<?=$contentPath;?>img/favicon.png">
+	</head>
+	<body>
+
+
+		<script type="text/javascript" src="<?=$contentPath;?>js/jquery.min.js"></script>
+        <script type="text/javascript" src="<?=$contentPath;?>js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="<?=$contentPath;?>js/scripts.js"></script>
+	</body>
+</html>
