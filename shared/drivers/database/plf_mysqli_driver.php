@@ -1131,7 +1131,7 @@ class PLF_Mysqli_driver extends PLF_Db
 
 	public function addForeignKey($tableName, $foreignKeyName, $columnName, $referanceTableName, $referanceColumn)
 	{
-		$sql			= 'ALTER TABLE `' . $tableName . '` ADD CONSTRAINT `' . $foreignKeyName . '` FOREIGN KEY(`' . $columnName . '`) REFERENCES `' . $referanceTableName . '`(`' . $referanceColumn . '`);';
+		$sql			= 'ALTER TABLE `' . $tableName . '` ADD CONSTRAINT `' . $foreignKeyName . '` FOREIGN KEY(`' . $columnName . '`) REFERENCES `' . $referanceTableName . '`(`' . $referanceColumn . '`) ON DELETE CASCADE;';
 		$this->query($sql, null, false);
 	}
 
