@@ -17,7 +17,7 @@ function transformBBcode($content)
 	{
 		foreach($bbcodeHelperBBcodes as $bbcodeTypeKey => $bbcodeTypeValue)
 		{
-			$pattern		= '/\[' . $bbcodeTypeKey . '([^\]]*)\](.*?)\[\/' . $bbcodeTypeKey . '\]/i';
+			$pattern		= '/\[' . $bbcodeTypeKey . '([^\]]*)\](.*?)\[\/' . $bbcodeTypeKey . '\]/s';
 			if(preg_match($pattern, $transformedContent, $matches))
 			{
 				if($bbcodeTypeKey == 'searchkeyword')
@@ -45,7 +45,7 @@ function getBBcodeContent($content, $replaced, $matches, $name)
 	$bbcodeParams			= [];
 	if(!empty($matches[1]))
 	{
-		if(preg_match_all('/([a-zA-Z]+)\=\"([^"]*)\"/i', $matches[1], $matchedParameters))
+		if(preg_match_all('/([a-zA-Z]+)\=\"([^"]*)\"/s', $matches[1], $matchedParameters))
 		{
 			for($i = 0; $i < count($matchedParameters[1]); $i++)
 			{
@@ -58,20 +58,20 @@ function getBBcodeContent($content, $replaced, $matches, $name)
 	$transformedContent					= $content;
 	$parameterHtml						= $replaced;
 
-	if(preg_match_all('/\{\{(?P<name>\w+)\}\}/i', $parameterHtml, $replacedKeys))
+	if(preg_match_all('/\{\{(?P<name>\w+)\}\}/s', $parameterHtml, $replacedKeys))
 	{
 
 		foreach($replacedKeys['name'] as $replaceKey)
 		{
 			if($replaceKey == 'bbcodeContent') {
-				$parameterHtml = preg_replace('/\{\{' . $replaceKey . '\}\}/i', $matches[2], $parameterHtml);
+				$parameterHtml = preg_replace('/\{\{' . $replaceKey . '\}\}/s', $matches[2], $parameterHtml);
 			}elseif($replaceKey == 'bbCodeColoredContent') {
 				$newLineString			= strtr($matches[2], array('<div>' => "\n", '</div>'=>''));
-				$removedHtmlString		= preg_replace('/\&(\w+)\;/i', ' ', "<?\n" . strip_tags($newLineString) . "\n?>");
+				$removedHtmlString		= preg_replace('/\&(\w+)\;/s', ' ', "<?\n" . strip_tags($newLineString) . "\n?>");
 				$highlightedSyntax		= highlight_string($removedHtmlString, true);
-				$parameterHtml = preg_replace('/\{\{' . $replaceKey . '\}\}/i', $highlightedSyntax, $parameterHtml);
+				$parameterHtml = preg_replace('/\{\{' . $replaceKey . '\}\}/s', $highlightedSyntax, $parameterHtml);
 			}else{
-				$parameterHtml			= preg_replace('/\{\{'. $replaceKey .'\}\}/i', $bbcodeParams[$replaceKey], $parameterHtml);
+				$parameterHtml			= preg_replace('/\{\{'. $replaceKey .'\}\}/s', $bbcodeParams[$replaceKey], $parameterHtml);
 			}
 		}
 	}

@@ -58,7 +58,7 @@ class Manager extends PLF_Controller
 						$this->sendError('View name is invalid');
 
 					break;
-				case 'createuserstable':
+				case 'createrootuser':
 					$this->createUsersTable();
 
 					break;
@@ -99,11 +99,11 @@ class Manager extends PLF_Controller
 		echo "Usage: \n";
 		echo "manager createapp [Application Name] \n";
 		echo "manager createcontroller [Controller Name]\n";
-		echo "manager createmodel Model Name]\n";
+		echo "manager createmodel [Model Name]\n";
 		echo "manager createview [View Name]\n";
-		echo "manager createadminpage\n";
+		echo "manager createadminpage [Admin Page Name]\n";
 		echo "manager syncdb\n";
-		echo "manager createuserstable\n";
+		echo "manager createrootuser\n";
 		echo "manager changeuserpassword [User Name]\n";
 		echo $error;
 	}

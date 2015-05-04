@@ -36,8 +36,8 @@ class Route extends PLF_Uri
 * @author 
 * @var array $routes
 * This file lets you re-map URI requests to specific controller functions.
-* default URLs are index.php?PLF=controller/function/parameter1/parameter2
-* @example $routes['test/(:num)/(:num)/(:any)']	= 'class/function/$1/$2/$3';
+* default URLs are index.php/controller/function/parameter1/parameter2
+* @example $userRoutes['test/(:num)/(:num)/(:any)']	= 'class/function/$1/$2/$3';
 * 
 */
 
