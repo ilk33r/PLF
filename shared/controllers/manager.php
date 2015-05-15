@@ -565,6 +565,7 @@ class Manager extends PLF_Controller
 					}
 
 					$default					= (isset($objectData['default'])) ? $objectData['default'] : null;
+					$default					= substr($default, 0, strlen($columnData->default));
 					if(!$columnChanged && $columnData->default != $default)
 					{
 						$columnChanged			= true;

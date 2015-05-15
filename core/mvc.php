@@ -153,7 +153,6 @@ class PLF_Output
 
 	private $contentPath			= '';
 	private $contentPathName		= '';
-	private $subDirectory			= '';
 	private $outputData				= array();
 
 
@@ -177,7 +176,6 @@ class PLF_Output
 		ob_start();
 		
 		$pathParts				= pathinfo($_SERVER['PHP_SELF']);
-		$this->subDirectory		= (substr($pathParts['dirname'], -1) == '/')?$pathParts['dirname']:$pathParts['dirname'].'/';
 	}
 
 	
@@ -382,10 +380,10 @@ class PLF_Output
 		{
 			if($path == NULL)
 			{
-				$this->contentPath		= $this->subDirectory.'content/'.APPLICATIONNAME.'/';
+				$this->contentPath		= Config::$plfDirectory . 'content/' . APPLICATIONNAME . '/';
 				$this->contentPathName	= APPLICATIONNAME;
 			}else{
-				$this->contentPath		= $this->subDirectory.'content/'.$path.'/';
+				$this->contentPath		= Config::$plfDirectory . 'content/' . $path . '/';
 				$this->contentPathName	= $path;
 			}
 			

@@ -98,11 +98,6 @@ class PLF_Loader
 			$this->model($model);
 		}
 		
-		foreach($this->autoloadStaticClasses as $static)
-		{
-			$this->staticClass($static);
-		}
-		
 	}
 
 
@@ -336,9 +331,6 @@ class PLF_Uri
 			$request		= substr($request, 0, -1);
 		}
 
-		if(PHP_SAPI != 'cli')
-			$request			= substr($request, strlen(Config::$plfDirectory));
-
 		foreach($routes as $key => $route)
 		{
 			$key		= str_replace(array(':any', ':num'), array('[^/]+', '[0-9]+'), $key);
@@ -453,6 +445,11 @@ class PLF_Uri
 		{
 			$explodedGETString		= explode('?', $requestURL);
 			$requestURL				= $explodedGETString[0];
+		}
+
+		if(PHP_SAPI != 'cli')
+		{
+			$requestURL			= substr($requestURL, strlen(Config::$plfDirectory));
 		}
 
 		if(empty($requestURL) || $requestURL == '/')

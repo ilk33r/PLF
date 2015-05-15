@@ -70,20 +70,6 @@ class Autoload extends PLF_Loader
 	protected $autoloadModel			= array();
 
 
-/**
-* ------------------------------------------------
-* Autoload static classes
-* ------------------------------------------------
-* 
-* @author ilker özcan
-* @var array $autoloadStaticClasses
-* this classes must be inside libraries folder
-* 
-*/
-
-	protected $autoloadStaticClasses	= array();
-
-
 	public function __construct()
 	{
 		parent::__construct();

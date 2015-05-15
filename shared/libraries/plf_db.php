@@ -214,6 +214,7 @@ class ActiveRecord
 	private $_mtmField						= null;
 	private $_predicate						= null;
 	private $_lastResult					= null;
+	private $_objectCount					= null;
 
 	public function __construct()
 	{
@@ -603,6 +604,16 @@ class ActiveRecord
 				return false;
 			}
 		}
+	}
+
+	public function count()
+	{
+		if(is_null($this->_objectCount))
+		{
+			$this->_objectCount			= $this->db->query('select count(*) as objectCount from ' . $this->databaseTableName)->row()->objectCount;
+		}
+
+		return $this->_objectCount;
 	}
 
 	private function databaseObjectsToArray()
