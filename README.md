@@ -1,6 +1,8 @@
 # PLF
 ===
 
+[![Build Status](https://travis-ci.org/ilk33r/PLF.svg)](https://travis-ci.org/ilk33r/PLF)
+
 ## Lightweight, opensource php framework
 
 PLF is lightweight framework for people who build web sites using PHP. PLF is free and open source.
