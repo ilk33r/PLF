@@ -1,8 +1,24 @@
 language: php
 php:
-  - "5.3"
-  - "5.4"
-  - "5.5"
-  - "5.6"
-  - "hhvm"
-  - "nightly"
+  - 5.4
+  - 5.5
+  - 5.6
+  - 7.0
+  - hhvm
+  - hhvm-nightly
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - php: hhvm-nightly
+    - php: 7.0
+
+sudo: false
+
+before_script:
+  - php -r "echo INTL_ICU_VERSION . \"\n\";"
+  - mysqli --version
+  - mysqli -e 'CREATE DATABASE plftest;';
+
+script:
+    -phpunit -d date.timezone=UTC
