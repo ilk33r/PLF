@@ -737,7 +737,7 @@ class PLF_Mysqli_driver extends PLF_Db
 			if(!is_null($pk))
 			{
 				$sqlString					.= 'WHERE ';
-				$sqlString					.= $pk['name'] . ' = ? ';
+				$sqlString					.= $tableName . '.' . $pk['name'] . ' = ? ';
 				$predicateValues[]			= $pk['value'];
 			}
 		}

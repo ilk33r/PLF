@@ -82,7 +82,8 @@ class AdminLibrary
 
 							}
 						}
-					}else{
+					}elseif(!$dbObject->getObjectId())
+					{
 						$hasError = true;
 						$objectHasError	= true;
 						$errorFields[] = $fieldName;
@@ -140,7 +141,7 @@ class AdminLibrary
 		}
 
 		$status			= ($hasError) ? false : true;
-		return ['status'=>$status, 'errorMessage'=>$errorMessage, 'errorFields'=>$errorFields, 'objectId'=>$pk];
+		return ['status'=>$status, 'errorMessage'=>$errorMessage, 'errorFields'=>$errorFields, 'objectId'=>(isset($pk))?$pk:0];
 	}
 
 	public function selectField($fieldName, $fieldData, $value, $params)

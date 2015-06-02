@@ -17,8 +17,8 @@ sudo: false
 
 before_script:
   - php -r "echo INTL_ICU_VERSION . \"\n\";"
-  - mysqli --version
-  - mysqli -e 'CREATE DATABASE plftest;';
+  - mysql --version
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS plftest;' -uroot;
 
 script:
-    -phpunit -d date.timezone=UTC
+    -phpunit -d date.timezone=UTC tests/travis/phpunit_mysql.xml --coverage-text

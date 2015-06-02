@@ -412,9 +412,10 @@ class ActiveRecord
 					$this->_lastResult			= $this->db->result();
 					if(isset($this->_lastResult['result1']))
 					{
-						foreach($this->_lastResult['result1'] as $resultKey => $resultValue)
+						foreach($this->_lastResult['result1'][0] as $resultKey => $resultValue)
 						{
-							$this->$resultKey		= $resultValue;
+							$this->_lastResult[$resultKey]	= $resultValue;
+							$this->$resultKey				= $resultValue;
 						}
 					}
 

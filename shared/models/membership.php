@@ -310,8 +310,7 @@ class Membership extends PLF_Model
 				}else {
 					if ($userData->activateToken == $unserializedKey->key) {
 						$response->status = true;
-						$_SESSION['ActivateToken'] = $decodedKey;
-						$_SESSION['ActivateTokenIsCorrect'] = true;
+						$response->userId = $unserializedKey->userId;
 					} else {
 						$response->status = false;
 						$response->msg = self::$responseCodes[6];

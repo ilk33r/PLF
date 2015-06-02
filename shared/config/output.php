@@ -48,7 +48,7 @@ class Output extends PLF_Output
 *
 */
 
-	public $poweredByHeader			= 'PLF (Lightweight PHP web framework)';
+	public $poweredByHeader			= 'PHP PLF Framework (www.plf.rocks)';
 
 
 /**
